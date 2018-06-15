@@ -97,7 +97,9 @@ public class PurchaseOrder {
         this.origin = origin;
     }
 
-/** Uncomment this method for retrieving order total !!! **/
+/** Uncomment this method for retrieving order total !!! 
+    Also, need to update the App-deploy.yaml file with the right ACR**/
+	
     public Float getDiscountAmount() {
 	return ( (this.price * this.quantity) * ( Float.parseFloat(this.dcode) / 100 ) );
     } 

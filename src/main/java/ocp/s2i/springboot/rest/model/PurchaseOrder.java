@@ -98,6 +98,7 @@ public class PurchaseOrder {
     }
 
 /** Uncomment this method for retrieving order total !!! 
+    Also, need to update the App-deploy.yaml file with the right ACR**/
     public Float getDiscountAmount() {
 	return ( (this.price * this.quantity) * ( Float.parseFloat(this.dcode) / 100 ) );
     } 
@@ -105,7 +106,6 @@ public class PurchaseOrder {
     public Float getOrderTotal() {
 	return ( (this.price * this.quantity) - getDiscountAmount() );
     }
-    Also, need to update the App-deploy.yaml file with the right ACR**/
 	
     public String toString() {
 	StringBuffer sb = new StringBuffer();
